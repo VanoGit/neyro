@@ -249,7 +249,7 @@ int main()
   ifstream f("mnist_train.csv");
   vector<long double> pixels;
   vector<long double> answ;
-  int counter = 7000;
+  int counter = 2000;
   string zn;
   getline(f, zn);
   NeyroNet n;
@@ -273,7 +273,7 @@ int main()
 
     answ = { 0,0,0,0,0,0,0,0,0,0 };
     answ[stoi(num)] = 1;
-    cout << 7000 - counter << " ";
+    cout << 2000 - counter << " ";
     n.Train(pixels, answ);
     pixels.clear();
   }
